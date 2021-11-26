@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --text-dark: hsl(238, 29%, 16%);
+  --text-red: hsl(14, 88%, 65%);
+  --bg-violet: hsl(273, 75%, 66%);
+  --bg-blue: hsl(240, 73%, 65%);
+  --text-neutral-dark: hsl(237, 12%, 33%);
+  --text-neutral-blue: hsl(240, 6%, 50%);
+  --divider: hsl(240, 5%, 91%);
+}
+html {
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-violet),
+    var(--bg-blue)
+  );
+  min-height: 100vh;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+/* Utility classes */
+.fw-bold {
+  font-weight: 700 !important;
+}
+.fs-2 {
+  font-size: 1.4rem;
+}
+.fs-3 {
+  font-size: 3rem;
+}
+.fc-dark {
+  color: var(--text-dark);
+}
+.text-center {
+  text-align: center;
+}
+.d-none {
+  display: none;
+}
+/* --------------- */
+
+/* For mobile max-width 375px */
+.container {
+  border-radius: 2rem;
+  width: 80%;
+  min-width: 375px;
+  margin: auto;
+  background-color: #fff;
+  padding: 0 3rem;
+}
+
+.img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.bg-mobile {
+  width: 80%;
+  position: absolute;
+  top: -100%;
+}
+.bg-shadow {
+  width: 80%;
+}
+
+.item-container {
+  padding: 2rem 0;
+}
+
+.accordion-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-neutral-dark);
+  cursor: pointer;
+}
+
+.question:hover span {
+  color: var(--text-red);
+}
+
+.question div {
+  transition: transform 0.4s linear;
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s linear;
+}
+
+.answer p {
+  font-size: 1.2rem;
+  padding: 1.3rem 0 0;
+  color: var(--text-neutral-blue);
+}
+
+/* ----- */
+
+/* For desktop */
+@media (min-width: 868px) {
+  .container {
+    display: flex;
+    max-width: 1440px;
+    width: 80%;
+    padding: 0;
+  }
+  .img {
+    flex: 1;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .bg-pattern {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    transform: translateX(-18%);
+  }
+  .position {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .bg-box {
+    display: block;
+    position: absolute;
+    width: 40%;
+    top: 38%;
+    left: -20%;
+    z-index: 1;
+  }
+
+  .second-position {
+    width: 100%;
+    overflow: hidden;
+  }
+  .bg-woman {
+    display: block;
+    min-width: 300px;
+    width: 100%;
+    transform: translateX(-18%);
+  }
+
+  /* mobile */
+  .bg-mobile {
+    display: none;
+  }
+
+  .bg-shadow {
+    display: none;
+  }
+  /* ------ */
+
+  .item-container {
+    padding: 2rem;
+    flex: 1;
+  }
+}
+
+/* Attribute */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
